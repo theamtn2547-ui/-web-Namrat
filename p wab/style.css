@@ -1,0 +1,286 @@
+/* กำหนดตัวแปรสีจาก Brand Canvas */
+:root {
+    --color-black: #1A1A1A; /* Black */
+    --color-dark-blue: #0A192F; /* Navy Blue - Strong/Unwavering */
+    --color-grey: #4A4A4A; /* Grey - Calm/Relaxed */
+    --color-light-grey: #F4F4F4; /* Light Background */
+    --color-ocean-blue: #00BFFF; /* Bright Accent Color - Charm/Freshness */
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    line-height: 1.6;
+    background-color: #FFFFFF; /* พื้นหลังสีขาวสะอาดตา */
+    color: var(--color-dark-blue);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-dark-blue);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-ocean-blue);
+}
+
+.accent {
+    color: var(--color-ocean-blue); /* สีเน้นหลัก */
+    font-weight: 700;
+}
+
+.bold {
+    font-weight: 600;
+    color: var(--color-dark-blue);
+}
+
+.section-padding {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--color-dark-blue);
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid var(--color-light-grey);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--color-grey);
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--color-dark-blue);
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%; /* ทำให้ดู Minimalist และเน้น Persona */
+    border: 5px solid var(--color-ocean-blue);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-ocean-blue); /* สีเน้นหลัก */
+    color: white;
+    border: 2px solid var(--color-ocean-blue);
+    border-radius: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #009ACD; /* สีเข้มขึ้นเมื่อ Hover */
+    transform: translateY(-2px);
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--color-light-grey); /* พื้นหลังเทาอ่อนเพื่อให้เด่น */
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1em;
+}
+
+.text-link {
+    font-weight: 600;
+    color: var(--color-ocean-blue);
+    display: block;
+    margin-top: 30px;
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-light-grey);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 15px 15px 5px;
+    font-size: 1.2em;
+    color: var(--color-dark-blue);
+}
+
+.project-card p {
+    padding: 0 15px 15px;
+    color: var(--color-grey);
+    font-size: 0.95em;
+}
+
+.card-link {
+    display: block;
+    padding: 10px 15px;
+    color: var(--color-ocean-blue);
+    border-top: 1px solid var(--color-light-grey);
+    font-weight: 600;
+}
+
+/* Footer Section (Contact) */
+.footer-section {
+    background-color: var(--color-dark-blue); /* ใช้สีเข้มเพื่อให้ดู Strong/Confident */
+    color: white;
+    text-align: center;
+    padding: 40px 5%;
+}
+
+.footer-section a {
+    color: var(--color-ocean-blue);
+}
+
+.footer-section .social-links a {
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.footer-section p {
+    margin-top: 15px;
+}/* About Section - ปรับเป็น Grid Layout */
+.about-section {
+    background-color: var(--color-light-grey);
+    text-align: left; /* เปลี่ยนให้ข้อความเป็นชิดซ้าย */
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* แบ่งเป็น 1 ส่วนสำหรับรูปภาพ และ 2 ส่วนสำหรับข้อความ */
+    gap: 50px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px; /* ขอบโค้งเล็กน้อยเพื่อให้ดูทันสมัย */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* เงาบาง ๆ */
+}
+
+.about-text p {
+    max-width: none; /* ยกเลิกการจำกัดความกว้างของข้อความ */
+    margin: 0 0 20px;
+    font-size: 1.1em;
+}
+
+.about-cta {
+    margin-top: 10px;
+}
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+    .about-content-grid {
+        grid-template-columns: 1fr; /* บนมือถือแสดงเป็น 1 คอลัมน์ (ภาพอยู่ด้านบน) */
+        gap: 30px;
+    }
+
+    .about-image {
+        order: 1; /* ให้รูปภาพอยู่ด้านบน */
+        text-align: center;
+    }
+
+    .about-text {
+        order: 2; /* ให้ข้อความอยู่ด้านล่าง */
+    }
+}
